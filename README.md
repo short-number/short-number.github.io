@@ -1,4 +1,4 @@
 # Short number documentation
 
-- Documentation for [short-number](https://github.com/SerhiiCho/short-number) package
-- Online [here](https://serhiicho.github.io/short-number-docs/)
+- Documentation for [short-number](https://github.com/short-number/short-number) package
+- Online [here](https://short-number.github.io/)

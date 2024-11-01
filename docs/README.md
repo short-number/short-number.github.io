@@ -65,7 +65,7 @@ Number::conv(20234); // returns: 20m
 
 ## 🎁 Contribute language support
 
-Here is the [commit](https://github.com/SerhiiCho/short-number/commit/fdafe3e61c4b1e5bfe16594b76d5a95b4c4aee4c) that added support for Ukrainian language.
+Here is the [commit](https://github.com/short-number/short-number/commit/fdafe3e61c4b1e5bfe16594b76d5a95b4c4aee4c) that added support for Ukrainian language.
 Contribute another language is very simple. You need to make 3 steps:
 
 ### Step 1. Translations
