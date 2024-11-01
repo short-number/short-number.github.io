@@ -1,11 +1,15 @@
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { defineUserConfig } from 'vuepress'
+import { viteBundler } from '@vuepress/bundler-vite'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { defaultTheme } from '@vuepress/theme-default'
 
 export default defineUserConfig({
-    base: '/short-number-docs/',
+    base: '/',
     lang: 'en-US',
     title: 'Short number',
-    description: 'Lightweight package that shortens given number by taking digits and adding K, M, B or T after them',
+    bundler: viteBundler(),
+    description:
+        'Lightweight package that shortens given number by taking digits and adding K, M, B or T after them',
     plugins: [
         searchPlugin({
             locales: {
@@ -13,7 +17,7 @@ export default defineUserConfig({
                     placeholder: 'Search',
                 },
             },
-        })
+        }),
     ],
     theme: defaultTheme({
         navbar: [
@@ -27,11 +31,11 @@ export default defineUserConfig({
             },
             {
                 text: 'GitHub',
-                link: 'https://github.com/SerhiiCho/short-number',
+                link: 'https://github.com/short-number/short-number',
             },
             {
                 text: '📃 Changelog',
-                link: 'https://github.com/SerhiiCho/short-number/blob/master/CHANGELOG.md',
+                link: 'https://github.com/short-number/short-number/blob/main/CHANGELOG.md',
             },
             {
                 text: '👨🏻‍💻 About author',

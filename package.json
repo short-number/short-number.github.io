@@ -1,16 +1,29 @@
 {
-  "name": "short-number-docs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/SerhiiCho/short-number-docs",
-  "author": "SerhiiCho <serhiicho@protonmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
-  },
-  "devDependencies": {
-    "@vuepress/plugin-search": "^2.0.0-beta.53",
-    "vuepress": "^2.0.0-beta.53"
-  }
+    "name": "short-number",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/short-number/short-number.github.io",
+    "author": "SerhiiCho <serhiicho@protonmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs",
+        "deploy": "yarn build && gh-pages -d docs/.vuepress/dist"
+    },
+    "dependencies": {
+        "@vuepress/bundler-vite": "^2.0.0-rc.18",
+        "@vuepress/plugin-search": "^2.0.0-rc.18",
+        "@vuepress/theme-default": "^2.0.0-rc.18",
+        "vuepress": "^2.0.0-rc.18"
+    },
+    "devDependencies": {
+        "sass-embedded": "^1.80.4",
+        "gh-pages": "^6.2.0"
+    },
+    "contributors": [
+        {
+            "name": "SerhiiCho",
+            "email": "serhiicho@protonmail.com"
+        }
+    ]
 }
