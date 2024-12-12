@@ -19,7 +19,7 @@ composer require serhii/short-number:^4.0
 ```
 
 ## Supported PHP Versions
-**Short Number** requires a minimum PHP version of `8.1`. Here is the list of supported PHP versions:
+The list of all supported PHP versions:
 
 - [8.1 (enums, readonly properties)](https://www.php.net/releases/8.1/en.php)
 - [8.2 (readonly classes, intersection types)](https://www.php.net/releases/8.2/en.php)

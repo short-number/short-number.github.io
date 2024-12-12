@@ -33,14 +33,9 @@ export default defineVersionedConfig(
 
             sidebar: {
                 '/3.x/': [
-                    {
-                        text: 'Guide',
-                        items: [{ text: 'Get Started', link: '/3.x/' }],
-                    },
-                    {
-                        text: 'Information',
-                        items: [{ text: 'Contribute', link: '/3.x/contribute' }],
-                    },
+                    { text: 'Get Started', link: '/3.x/' },
+                    { text: 'Configurations', link: '/3.x/configurations' },
+                    { text: 'Contribute', link: '/3.x/contribute' },
                 ],
                 '/4.x/': [
                     {
