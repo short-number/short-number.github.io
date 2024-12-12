@@ -1,12 +1,10 @@
 ---
 outline: deep
-title: Contribute - 4.x
+title: Contribute Locale - 4.x
 description: Learn how to contribute to Short Number library by adding a new locale
 ---
 
-# Contribute Language Support
-Here is the [commit](https://github.com/short-number/short-number/commit/fdafe3e61c4b1e5bfe16594b76d5a95b4c4aee4c) that added support for Ukrainian language.
-Contribute another language is very simple. You need to make 3 steps:
+# Contribute Locale
 
 ## Step 1. Translations
 Add translations to `resources/translations.php` file. Here is the file:

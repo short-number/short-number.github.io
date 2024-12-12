@@ -60,6 +60,8 @@ export default defineVersionedConfig(
                 ],
             },
 
+            logo: '/images/nav-logo.png',
+
             nav: [
                 {
                     component: 'VersionSwitcher',
