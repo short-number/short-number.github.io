@@ -31,6 +31,40 @@ export default defineVersionedConfig(
                 copyright: `Copyright © 2019 - ${new Date().getFullYear()} <a href="https://serhii.io/about-me" target="_blank">Serhii Chornenkyi (Serhii Cho)</a>`,
             },
 
+            sidebar: {
+                '/3.x/': [
+                    {
+                        text: 'Guide',
+                        items: [{ text: 'Get Started', link: '/3.x/' }],
+                    },
+                    {
+                        text: 'Information',
+                        items: [{ text: 'Contribute', link: '/3.x/contribute' }],
+                    },
+                ],
+                '/4.x/': [
+                    {
+                        text: 'Guide',
+                        items: [
+                            { text: 'Get Started', link: '/4.x/' },
+                            { text: 'Usage Guide', link: '/4.x/usage-guide' },
+                            { text: 'Configurations', link: '/4.x/configurations' },
+                        ],
+                    },
+                    {
+                        text: 'Information',
+                        items: [
+                            { text: 'Upgrade Guide', link: '/4.x/upgrade' },
+                            {
+                                text: 'What is Short Number?',
+                                link: '/4.x/what-is-short-number',
+                            },
+                            { text: 'Contribute', link: '/4.x/contribute' },
+                        ],
+                    },
+                ],
+            },
+
             nav: [
                 {
                     component: 'VersionSwitcher',
@@ -42,10 +76,6 @@ export default defineVersionedConfig(
                 {
                     text: 'Documentation',
                     link: '/4.x/',
-                },
-                {
-                    text: 'Usage example',
-                    link: 'https://replit.com/@SerhiiCho/Usage-of-short-number-package',
                 },
                 {
                     text: 'Release Notes',
