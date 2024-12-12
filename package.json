@@ -6,19 +6,15 @@
     "author": "SerhiiCho <serhiicho@protonmail.com>",
     "license": "MIT",
     "scripts": {
-        "dev": "vuepress dev docs",
-        "build": "vuepress build docs",
-        "deploy": "yarn build && gh-pages -d docs/.vuepress/dist"
-    },
-    "dependencies": {
-        "@vuepress/bundler-vite": "^2.0.0-rc.18",
-        "@vuepress/plugin-search": "^2.0.0-rc.18",
-        "@vuepress/theme-default": "^2.0.0-rc.18",
-        "vuepress": "^2.0.0-rc.18"
+        "dev": "vitepress dev docs",
+        "build": "vitepress build docs",
+        "preview": "yarn build && vitepress preview docs",
+        "deploy": "yarn build && gh-pages -d docs/.vitepress/dist"
     },
     "devDependencies": {
-        "sass-embedded": "^1.80.4",
-        "gh-pages": "^6.2.0"
+        "gh-pages": "^6.2.0",
+        "vitepress": "^1.5.0",
+        "vitepress-versioning-plugin": "^1.2.1"
     },
     "contributors": [
         {

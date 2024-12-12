@@ -1,13 +1,18 @@
 ---
-title: Docs
+outline: deep
+search: false
+title: Get Started - 3.x
 ---
 
 # Documentation
 
+:::danger Outdated version
+You are currently viewing an outdated version of the Short Number library. [Switch to the latest version](/) to access the newest features, improvements, and updates.
+:::
+
 Lightweight package shortens given number to a short representation of it. For example **1234** will be formatted to **1k** and **20244023** to **20m**. Package supports multiple languages, the default it's set to English.
 
-## 🐘 Supported PHP versions
-
+## Supported PHP Versions
 - ✅ 7.2
 - ✅ 7.3
 - ✅ 7.4
@@ -16,18 +21,16 @@ Lightweight package shortens given number to a short representation of it. For e
 - ✅ 8.2
 - ✅ 8.3
 
-## ⚙️ Language configurations
+## Language Configurations
 
-### Change language
-
+### Change Language
 For changing the language you want to call `set()` method once before calling other methods from this package.
 
 ```php
 Serhii\ShortNumber\Lang::set('ru');
 ```
 
-### Overwrite translations
-
+### Overwrite Translations
 If you want to replace existing translations for supported language or add your own language, you can pass custom translations as the second argument to `set()` method.
 
 ```php
@@ -46,16 +49,14 @@ You can overwrite any fields that you need, overwriting all fields is not necess
 Serhii\ShortNumber\Lang::set('en', ['million' => 'mil']);
 ```
 
-## 🚩 Supported languages
-
+## Supported Languages
 | Flag | Language | Code (ISO 639-1) | Thousand | Million | Billion | Trillion |
 | --- | --- | --- | --- | --- | --- | --- |
 | 🇬🇧 | English | en | 1k | 1m | 1b | 1t |
 | 🇷🇺 | Russian | ru | 1тыс | 1млн | 1млд | 1трн |
 | 🇺🇦 | Ukrainian | uk | 1тис | 1млн | 1млд | 1трн |
 
-## 👏 Usage
-
+## Usage
 ```php
 use Serhii\ShortNumber\Number;
 
@@ -63,8 +64,7 @@ Number::conv(1893234); // returns: 1m
 Number::conv(20234); // returns: 20m
 ```
 
-## 🎁 Contribute language support
-
+## Contribute Language Support
 Here is the [commit](https://github.com/short-number/short-number/commit/fdafe3e61c4b1e5bfe16594b76d5a95b4c4aee4c) that added support for Ukrainian language.
 Contribute another language is very simple. You need to make 3 steps:
 
@@ -92,7 +92,6 @@ return [
 ```
 
 ### Step 2. Tests
-
 After adding another language, you need to add line to `tests/TranslationsTest.php`. The method `runTestsForSuffixes(string $lang, string[] $suffixes)` will generate tests for you. You just need to run `./vendor/bin/phpunit` to make sure your translation works.
 
 ```php
@@ -108,11 +107,9 @@ class TranslationsTest extends TestCase
 ```
 
 ### Step 3. README.md
-
 Last step you need to add new language to README.md file under the section **Supported languages**.
 
-## 🚀 Quick start
-
+## Quick Start
 ```bash
-composer require serhii/short-number
+composer require serhii/short-number:^3.0
 ```

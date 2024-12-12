@@ -1,0 +1,71 @@
+import defineVersionedConfig from 'vitepress-versioning-plugin'
+
+export default defineVersionedConfig(
+    {
+        lang: 'en-US',
+        title: 'Short number',
+        description:
+            'Lightweight, multilingual library for formatting large numbers into compact, human-readable abbreviations using language-specific units, making it easy to display big numbers in a concise and user-friendly format',
+
+        versioning: {
+            latestVersion: '4.x',
+        },
+
+        lastUpdated: true,
+
+        sitemap: {
+            hostname: 'https://short-number.github.io',
+
+            // exclude old version pages from sitemap
+            transformItems: items => {
+                return items.filter(item => !item.url.startsWith('3.x/'))
+            },
+        },
+
+        themeConfig: {
+            versionSwitcher: false,
+
+            footer: {
+                message:
+                    'Released under the <a href="https://github.com/short-number/short-number/blob/main/LICENSE" target="_blank">MIT License</a>',
+                copyright: `Copyright © 2019 - ${new Date().getFullYear()} <a href="https://serhii.io/about-me" target="_blank">Serhii Chornenkyi (Serhii Cho)</a>`,
+            },
+
+            nav: [
+                {
+                    component: 'VersionSwitcher',
+                    props: {
+                        versions: ['4.x', '3.x'],
+                        latestVersion: '4.x',
+                    },
+                },
+                {
+                    text: 'Documentation',
+                    link: '/4.x/',
+                },
+                {
+                    text: 'Usage example',
+                    link: 'https://replit.com/@SerhiiCho/Usage-of-short-number-package',
+                },
+                {
+                    text: 'Release Notes',
+                    link: 'https://github.com/short-number/short-number/blob/main/CHANGELOG.md',
+                },
+            ],
+
+            search: {
+                provider: 'local',
+            },
+
+            socialLinks: [
+                {
+                    icon: 'github',
+                    ariaLabel: 'GitHub',
+                    link: 'https://github.com/short-number/short-number',
+                },
+            ],
+        },
+    },
+    // @ts-ignore
+    __dirname,
+)
