@@ -44,7 +44,7 @@ Lang::set('en', custom_translations: [ // [!code --]
 ]);
 ```
 
-## Step 4: Class Rename <Badge type="warning" text="optional" />
+## Step 4: Delete Class <Badge type="warning" text="optional" />
 If you have been using the `Serhii\ShortNumber\Rule` class directly in your code — which was neither documented nor recommended — you will need to get rid of it completely. It wasn't a part of the public API.
 
 ```php
