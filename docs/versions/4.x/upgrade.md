@@ -6,7 +6,7 @@ description: Learn how to upgrade Short Number library from 3.x to 4.x
 
 # Upgrade Guide from Version 3.x to 4.x
 
-**Short Number 4** brought a complete rewrite of the source code with improved configurations. The upgrade is very simple and requires only a few changes in your code. Follow this guide to upgrade your application from version `3.x` to `4.x`.
+**Short Number 4** brought a complete rewrite of the source code with improved configurations. The upgrade is very simple and requires only a few changes in your code. Follow this guide to upgrade your application from version `3.x` to `4.x`. Most of the steps here you're likely going to skip, as they are only applicable if you're using specific configurations or features.
 
 :::tip Optional Steps
 Some steps are marked with <Badge type="warning" text="optional" />, as they may not apply to you if you're not using the specific configurations or features mentioned.
@@ -44,4 +44,12 @@ Lang::set('en', custom_translations: [ // [!code --]
 ]);
 ```
 
-## Step 4:
+## Step 4: Class Rename <Badge type="warning" text="optional" />
+If you have been using the `Serhii\ShortNumber\Rule` class directly in your code — which was neither documented nor recommended — you will need to get rid of it completely. It wasn't a part of the public API.
+
+```php
+$rule = new Rule('thousand', [Rule::THOUSAND, Rule::MILLION - 1]); // [!code --:2]
+$output = $rule->formatNumber($number);
+```
+
+## Step 5:
