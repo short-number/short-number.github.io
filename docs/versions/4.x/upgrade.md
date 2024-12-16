@@ -30,7 +30,19 @@ Then run the following command to update the package:
 composer update serhii/short-number:^4.0
 ```
 
-## Step 3: Named Argument <Badge type="warning" text="optional" />
+## Step 3: Rename Method
+The method `conv` on the `Serhii\ShortNumber\Number` class was renamed to `short`:
+
+```php
+use Serhii\ShortNumber\Number;
+
+echo Number::conv(1000); // [!code --]
+echo Number::short(1000); // [!code ++]
+```
+
+It's behavior remains the same, but the name was changed to better reflect its purpose.
+
+## Step 4: Named Argument <Badge type="warning" text="optional" />
 If you are using named argument in the `Lang::set()` method as the second argument, you need to rename it from `custom_translations` to `overwrites`:
 
 ```php
@@ -44,12 +56,10 @@ Lang::set('en', custom_translations: [ // [!code --]
 ]);
 ```
 
-## Step 4: Delete Class <Badge type="warning" text="optional" />
+## Step 5: Delete Class <Badge type="warning" text="optional" />
 If you have been using the `Serhii\ShortNumber\Rule` class directly in your code — which was neither documented nor recommended — you will need to get rid of it completely. It wasn't a part of the public API.
 
 ```php
 $rule = new Rule('thousand', [Rule::THOUSAND, Rule::MILLION - 1]); // [!code --:2]
 $output = $rule->formatNumber($number);
 ```
-
-## Step 5:

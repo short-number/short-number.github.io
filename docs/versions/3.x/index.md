@@ -32,8 +32,8 @@ Lightweight package shortens given number to a short representation of it. For e
 ```php
 use Serhii\ShortNumber\Number;
 
-Number::conv(1893234); // returns: 1m
-Number::conv(20234); // returns: 20m
+Number::short(1893234); // returns: 1m
+Number::short(20234); // returns: 20m
 ```
 
 ## Quick Start

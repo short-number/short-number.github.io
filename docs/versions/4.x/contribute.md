@@ -28,10 +28,10 @@ Here is an English example of formulas:
 - `8 => [2, 'm']`: The number `44,000,000` has `8` digits, we take `2` digit from the beginning of the number and add the suffix `m` to it. Result is `44m`.
 - `12 => [3, 'b']`: The number `999,000,000,000` has `12` digits, we take `3` digit from the beginning of the number and add the suffix `b` to it. Result is `999b`.
 
-This method of defining suffixes is super flexible and can be used for any language. But, you can do even more with `AbbreviationSet`. Let's take a look at the more advanced example with Chinese language in the [next section](#abbreviation-rewrites).
+This method of defining suffixes is super flexible and can be used for any language. But, you can do even more with `AbbreviationSet`. Let's take a look at the more advanced example with Chinese language in the [next section](#abbreviation-overwrites).
 
-## Abbreviation Rewrites
-One of the coolest abilities of `AbbreviationSet` is the ability to define `rewrites`. Rewrites will be applied for the final output when the result is ready to be displayed.
+## Abbreviation Overwrites
+One of the coolest abilities of `AbbreviationSet` is the ability to define `overwrites`. Overwrites will be applied for the final output when the result is ready to be displayed.
 
 ```php
 return new AbbreviationSet(
@@ -42,7 +42,7 @@ return new AbbreviationSet(
         13 => '1:兆', 14 => '2:兆', 15 => '3:兆',
         16 => '4:兆', 17 => '1:京', 18 => '2:京',
     ],
-    rewrites: [ // [!code ++:7]
+    overwrites: [ // [!code ++:7]
         '1千' => '千',
         '1万' => '万',
         '1亿' => '亿',

@@ -10,8 +10,8 @@ To convert a number to a short number, you can use the `Serhii\ShortNumber\Numbe
 ```php
 use Serhii\ShortNumber\Number;
 
-Number::conv(1893234); // returns: 1m
-Number::conv(20234); // returns: 20m
+Number::short(1893234); // returns: 1m
+Number::short(20234); // returns: 20m
 ```
 
 If you need to change the language of the short number, you can use the `Serhii\ShortNumber\Lang` with its `set` method.
@@ -20,7 +20,7 @@ If you need to change the language of the short number, you can use the `Serhii\
 use Serhii\ShortNumber\Lang;
 
 Lang::set('ru');
-Number::conv(1893234); // returns: 1млн
+Number::short(1893234); // returns: 1млн
 ```
 
 Learn how to configure the library on the [Configuration](/4.x/configurations.html) page
