@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Short Number
-  text: Zero-Dependency
+  text: Number Shortening
   tagline: Lightweight, multilingual library for formatting large numbers into compact, human-readable abbreviations
   image:
     src: /images/logo.webp
