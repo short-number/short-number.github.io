@@ -21,11 +21,11 @@ To get the current active language you can use the `current()` method, which ret
 ```php{5}
 use Serhii\ShortNumber\Lang;
 
-Lang::set('ru');
+Lang::set('ru'); // [!code focus:5]
 
-$lang = Lang::current(); // [!code focus]
+$lang = Lang::current();
 
-echo $lang; // ru
+echo $lang; // output: "ru"
 ```
 
 ## Overwrite Translations
@@ -68,10 +68,12 @@ Lang::setOverwrites([ // [!code focus:9]
 You can overwrite one or more translations without without specifying all of them.
 
 ### Overwrite the Output
-You can also overwrite the whole output of the `short()` method by providing a custom translation for a specific number.
+You can also overwrite the whole output of the `Number::short()` method by providing a custom text for the output. Let's say you want to display `1000` instead of `1k`, you can do it like this:
 
 ```php
 use Serhii\ShortNumber\Lang;
 
-Lang::set('en', ['million' => 'mil']);
+Lang::set('en', ['1k' => '1000']); // [!code focus:3]
+
+echo Lang::short(1000); // output: "1000"
 ```
