@@ -41,23 +41,28 @@ One of the coolest abilities of `AbbreviationSet` is the ability to define `over
 ```php
 return new AbbreviationSet(
     formula: [
-        4 => '1:千', 5 => '1:万', 6 => '2:万',
-        7 => '3:万', 8 => '4:万', 9 => '1:亿',
-        10 => '2:亿', 11 => '3:亿', 12 => '4:亿',
-        13 => '1:兆', 14 => '2:兆', 15 => '3:兆',
-        16 => '4:兆', 17 => '1:京', 18 => '2:京',
+        4 => [1, '千'], 5 => [1, '万'], 6 => [2, '万'],
+        7 => [3, '万'], 8 => [4, '万'], 9 => [1, '亿'],
+        10 => [2, '亿'], 11 => [3, '亿'], 12 => [4, '亿'],
+        13 => [1, '兆'], 14 => [2, '兆'], 15 => [3, '兆'],
+        16 => [4, '兆'], 17 => [1, '京'], 18 => [2, '京'],
     ],
-    overwrites: [ // [!code ++:7]
+    overwrites: [ // [!code ++:12]
         '1千' => '千',
         '1万' => '万',
         '1亿' => '亿',
         '1兆' => '兆',
         '1京' => '京',
+        '-1千' => '-千',
+        '-1万' => '-万',
+        '-1亿' => '-亿',
+        '-1兆' => '-兆',
+        '-1京' => '-京',
     ],
 );
 ```
 
-In Chinese, instead of showing `1千` (1 thousand), we want to just display `千`. Same applies to other suffixes when the number is 1. This is where `overwrites` come in handy. The key of the rewrite is the original output, and the value is the new output. Keep in mind that overwrites will be applied to the full output, not just a part of it. The full string has to match the key to be replaced.
+In Chinese, instead of showing `1千` (1 thousand), we want to just display `千`. Same applies to other suffixes when the number is`1`. This is where `overwrites` come in handy. The key of the rewrite is the original output, and the value is the new output. Keep in mind that overwrites will be applied to the full output, not just a part of it. The full string has to match the key to be replaced.
 
 ## Step 2. Tests
 In the [`/tests/Sets/`](https://github.com/short-number/short-number/tree/main/tests/Sets) directory, create a test file for your language. The file should be named based on the language name. For example, for the Chinese language, the file is named `ChineseSetTest.php`.
