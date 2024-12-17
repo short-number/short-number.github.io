@@ -67,13 +67,12 @@ Lang::setOverwrites([ // [!code focus:9]
 
 All the language sets live in the [`/sets`](https://github.com/short-number/short-number/tree/main/sets) directory in the root of the project. There, you can find suffixes that you can override.
 
-### Overwrite the Output
-You can also overwrite the whole output of the `Number::short()` method by providing a custom text for the output. Let's say you want to display `1000` instead of `1k`, you can do it like this:
+Here is another example of simple overwrite:
 
 ```php
 use Serhii\ShortNumber\Lang;
 
-Lang::set('en', ['1k' => '1000']); // [!code focus:3]
+Lang::set('zh', ['千' => ' 千']); // [!code focus:3]
 
-echo Lang::short(1000); // output: "1000"
+echo Lang::short(2000); // output: "2 千"
 ```
