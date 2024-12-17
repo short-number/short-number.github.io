@@ -52,22 +52,9 @@ return new AbbreviationSet(
 );
 ```
 
-In Chinese, instead of showing `1千` (1 thousand), we want to just display `千`. Same applies to other suffixes when the number is 1. This is where `rewrites` come in handy. The key of the rewrite is the original output, and the value is the new output.
+In Chinese, instead of showing `1千` (1 thousand), we want to just display `千`. Same applies to other suffixes when the number is 1. This is where `overwrites` come in handy. The key of the rewrite is the original output, and the value is the new output. Keep in mind that overwrites will be applied to the full output, not just a part of it. The full string has to match the key to be replaced.
 
 ## Step 2. Tests
-After adding another language, you need to add line to `tests/TranslationsTest.php`. The method `runTestsForSuffixes(string $lang, string[] $suffixes)` will generate tests for you. You just need to run `./vendor/bin/phpunit` to make sure your translation works.
-
-```php
-class TranslationsTest extends TestCase
-{
-    public function testing_correct_conversion(): void
-    {
-        $this->runTestsForSuffixes('en', ['k', 'm', 'b', 't']);
-        $this->runTestsForSuffixes('ru', ['тыс', 'млн', 'млд', 'трн']);
-        // add same line for your language here
-    }
-}
-```
 
 ## Step 3. README File
 Add new language to `README.md` file under the section **Supported Languages** to let everybody know that this library supports your language.

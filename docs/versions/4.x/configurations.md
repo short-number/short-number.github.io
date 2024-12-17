@@ -32,7 +32,7 @@ echo $lang; // output: "ru"
 To customize existing translations for a supported language or to add a new language, you can provide custom translations as the second argument to the `Lang::set()` method.
 
 ### Overwrite Translations
-There are two approaches to overriding translations:
+There are two approaches to overriding translations suffixes:
 
 1. **Override the current language**: Applies changes to the active language in use.
 2. **Override a specific language**: Targets a specific language, regardless of the currently active one.
@@ -65,7 +65,7 @@ Lang::setOverwrites([ // [!code focus:9]
 ```
 :::
 
-You can overwrite one or more translations without without specifying all of them.
+All the language sets live in the [`/sets`](https://github.com/short-number/short-number/tree/main/sets) directory in the root of the project. There, you can find suffixes that you can override.
 
 ### Overwrite the Output
 You can also overwrite the whole output of the `Number::short()` method by providing a custom text for the output. Let's say you want to display `1000` instead of `1k`, you can do it like this:
