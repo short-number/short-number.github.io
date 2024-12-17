@@ -8,8 +8,8 @@ description: Learn how to upgrade Short Number library from 3.x to 4.x
 
 **Short Number 4** brought a complete rewrite of the source code with improved configurations. The upgrade is very simple and requires only a few changes in your code. Follow this guide to upgrade your application from version `3.x` to `4.x`. Most of the steps here you're likely going to skip, as they are only applicable if you're using specific configurations or features.
 
-:::tip Optional Steps
-Some steps are marked with <Badge type="warning" text="optional" />, as they may not apply to you if you're not using the specific configurations or features mentioned.
+:::tip Possible Steps
+Some steps are marked with <Badge type="warning" text="possible" />, as they may not apply to you if you're not using the specific configurations or features mentioned.
 :::
 
 ## Step 1: Composer File
@@ -43,7 +43,7 @@ echo Number::short(1000); // [!code ++]
 
 It's behavior remains the same, but the name was changed to better reflect its purpose.
 
-## Step 4: Named Argument <Badge type="warning" text="optional" />
+## Step 4: Named Argument <Badge type="warning" text="possible" />
 If you are using named argument in the `Lang::set()` method as the second argument, you need to rename it from `custom_translations` to `overwrites`:
 
 ```php
@@ -57,7 +57,7 @@ Lang::set('en', custom_translations: [ // [!code --]
 ]);
 ```
 
-## Step 5: Change Overwrites <Badge type="warning" text="optional" />
+## Step 5: Change Overwrites <Badge type="warning" text="possible" />
 If you are using the [overwrites feature](/4.x/configurations.html#overwrite-translations) of Short Number where you can overwrite the default translations, you need to change the way you define the overwrites. Here is the old and new ways of doing it:
 
 ::: code-group
@@ -85,7 +85,7 @@ Lang::set('en', overwrites: [
 
 You can also overwrite quadrillions with `q` key, but quadrillions weren't supported in the previous version.
 
-## Step 6: Delete Class <Badge type="warning" text="optional" />
+## Step 6: Delete Class <Badge type="warning" text="possible" />
 If you have been using the `Serhii\ShortNumber\Rule` class directly in your code — which was neither documented nor recommended — you will need to get rid of it completely. It wasn't a part of the public API.
 
 ```php
