@@ -5,6 +5,11 @@ description: Learn how to contribute to Short Number library by adding a new loc
 ---
 
 # Contribute Locale
+One of the main features of Short Number is the ability to support multiple languages. If you want to add a new language to the library, you can do it by following the steps below.
+
+:::warning Only Hindu-Arabic Numerals (0-9) Supported
+For now, languages with their own numerical system like Arabic, Roman, etc. are not supported. But, I will definitely consider adding support for the ability to overwrite the numerical system in the future versions if I see a demand for it.
+:::
 
 ## Step 1. Abbreviation Set
 Add the language set to [`/sets/`](https://github.com/short-number/short-number/blob/main/sets) directory based on the language code. Here is the `/sets/en.php` set for English as an example:
@@ -99,3 +104,7 @@ Add new language to `README.md` file under the section **Supported Languages** t
 | 🇬🇧   | English            | en   |
 | 🇨🇳   | Chinese            | zh   | // [!code ++]
 ```
+
+:::tip Reach Out to Us
+If you have any questions or suggestions, feel free to reach out to us on [GitHub Discussions](https://github.com/short-number/short-number/discussions) or [open an issue](https://github.com/short-number/short-number/issues/new).
+:::
