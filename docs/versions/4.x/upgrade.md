@@ -33,6 +33,7 @@ composer update serhii/short-number:^4.0
 ## Step 3: Rename Method
 The method `conv` on the `Serhii\ShortNumber\Number` class was renamed to `short`:
 
+
 ```php
 use Serhii\ShortNumber\Number;
 
@@ -50,13 +51,41 @@ use Serhii\ShortNumber\Lang;
 
 Lang::set('en', overwrites: [ // [!code ++]
 Lang::set('en', custom_translations: [ // [!code --]
-    'k' => 'kilo',
-    'm' => 'mega',
-    'b' => 'bill',
+    'thousand' => 'kilo',
+    'million' => 'mega',
+    'billion' => 'bill',
 ]);
 ```
 
-## Step 5: Delete Class <Badge type="warning" text="optional" />
+## Step 5: Change Overwrites <Badge type="warning" text="optional" />
+If you are using the [overwrites feature](/4.x/configurations.html#overwrite-translations) of Short Number where you can overwrite the default translations, you need to change the way you define the overwrites. Here is the old and new ways of doing it:
+
+::: code-group
+```php [Old Way]
+use Serhii\ShortNumber\Lang;
+
+Lang::set('en', overwrites: [
+    'thousand' => 'kilo',
+    'million' => 'mil',
+    'billion' => 'bil',
+    'trillion' => 'tril',
+]);
+```
+```php [New Way]
+use Serhii\ShortNumber\Lang;
+
+Lang::set('en', overwrites: [
+    'k' => 'kilo',
+    'm' => 'mil',
+    'b' => 'bil',
+    't' => 'tril',
+]);
+```
+:::
+
+You can also overwrite quadrillions with `q` key, but quadrillions weren't supported in the previous version.
+
+## Step 6: Delete Class <Badge type="warning" text="optional" />
 If you have been using the `Serhii\ShortNumber\Rule` class directly in your code — which was neither documented nor recommended — you will need to get rid of it completely. It wasn't a part of the public API.
 
 ```php
