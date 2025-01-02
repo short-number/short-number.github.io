@@ -24,4 +24,4 @@ Lang::set('ru'); // [!code focus:3]
 echo Number::short(1_893_234); // output: "1млн"
 ```
 
-Learn how to configure the library on the [Configuration](/4.x/configurations.html) page
+Learn how to configure the library on the [Configuration](/4.x/configurations/output.html) page

@@ -1,10 +1,10 @@
 ---
 outline: deep
-title: Configurations - 4.x
-description: Learn how to configure Short Number library in your application
+title: Language Configurations - 4.x
+description: Learn how to configure Short Number library in your application for a particular language
 ---
 
-# Configurations
+# Language Configurations
 Learn how to configure Short Number by changing language and overwriting translations.
 
 ## Change Language

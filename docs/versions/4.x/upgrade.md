@@ -58,7 +58,7 @@ Lang::set('en', custom_translations: [ // [!code --]
 ```
 
 ## Step 5: Change Overwrites <Badge type="warning" text="possible" />
-If you are using the [overwrites feature](/4.x/configurations.html#overwrite-translations) of Short Number where you can overwrite the default translations, you need to change the way you define the overwrites. Here is the old and new ways of doing it:
+If you are using the [overwrites feature](/4.x/configurations/language.html#overwrite-translations) of Short Number where you can overwrite the default translations, you need to change the way you define the overwrites. Here is the old and new ways of doing it:
 
 ::: code-group
 ```php [Old Way]

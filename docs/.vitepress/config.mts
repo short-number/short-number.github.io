@@ -43,7 +43,19 @@ export default defineVersionedConfig(
                         items: [
                             { text: 'Get Started', link: '/4.x/' },
                             { text: 'Usage Guide', link: '/4.x/usage-guide' },
-                            { text: 'Configurations', link: '/4.x/configurations' },
+                            {
+                                text: 'Configurations',
+                                items: [
+                                    {
+                                        text: 'Output',
+                                        link: '/4.x/configurations/output',
+                                    },
+                                    {
+                                        text: 'Language',
+                                        link: '/4.x/configurations/language',
+                                    },
+                                ],
+                            },
                         ],
                     },
                     {
