@@ -35,7 +35,7 @@ Here is an English example of formulas:
 
 This method of defining suffixes is super flexible and can be used for any language. But, you can do even more with `AbbreviationSet`. Let's take a look at the more advanced example with Chinese language in the [next section](#abbreviation-overwrites).
 
-## Abbreviation Overwrites
+### Abbreviation Overwrites
 One of the coolest abilities of `AbbreviationSet` is the ability to define `overwrites`. Overwrites will be applied for the final output when the result is ready to be displayed.
 
 ```php
