@@ -12,7 +12,7 @@ For now, languages with their own numerical system like Arabic, Roman, etc. are 
 :::
 
 ## Step 1. Abbreviation Set
-Add the language set to [`/sets/`](https://github.com/short-number/short-number/blob/main/sets) directory based on the language code. Here is the `/sets/en.php` set for English as an example:
+Add the language set to [`/sets/`](https://github.com/short-number/short-number/blob/master/sets) directory based on the language code. Here is the `/sets/en.php` set for English as an example:
 
 ```php
 return new AbbreviationSet(formula: [
@@ -65,7 +65,7 @@ return new AbbreviationSet(
 In Chinese, instead of showing `1千` (1 thousand), we want to just display `千`. Same applies to other suffixes when the number is`1`. This is where `overwrites` come in handy. The key of the rewrite is the original output, and the value is the new output. Keep in mind that overwrites will be applied to the full output, not just a part of it. The full string has to match the key to be replaced.
 
 ## Step 2. Tests
-In the [`/tests/Sets/`](https://github.com/short-number/short-number/tree/main/tests/Sets) directory, create a test file for your language. The file should be named based on the language name. For example, for the Chinese language, the file is named `ChineseSetTest.php`.
+In the [`/tests/Sets/`](https://github.com/short-number/short-number/tree/master/tests/Sets) directory, create a test file for your language. The file should be named based on the language name. For example, for the Chinese language, the file is named `ChineseSetTest.php`.
 
 You can just copy the content of one of the existing test files and rewrite it for your language. Make sure to test all the possible cases.
 

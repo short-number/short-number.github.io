@@ -64,7 +64,7 @@ Lang::setOverwrites([ // [!code focus:9]
 ```
 :::
 
-All the language sets live in the [`/sets`](https://github.com/short-number/short-number/tree/main/sets) directory in the root of the project. There, you can find suffixes that you can override.
+All the language sets live in the [`/sets`](https://github.com/short-number/short-number/tree/master/sets) directory in the root of the project. There, you can find suffixes that you can override.
 
 Here is another example of simple overwrite:
 
