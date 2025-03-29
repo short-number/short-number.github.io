@@ -27,7 +27,7 @@ export default defineVersionedConfig(
 
             footer: {
                 message:
-                    'Released under the <a href="https://github.com/short-number/short-number/blob/main/LICENSE" target="_blank">MIT License</a>',
+                    'Released under the <a href="https://github.com/short-number/short-number/blob/master/LICENSE" target="_blank">MIT License</a>',
                 copyright: `Copyright © 2019 - ${new Date().getFullYear()} <a href="https://serhii.io/about-me" target="_blank">Serhii Chornenkyi (Serhii Cho)</a>`,
             },
 
@@ -88,7 +88,7 @@ export default defineVersionedConfig(
                 },
                 {
                     text: 'Release Notes',
-                    link: 'https://github.com/short-number/short-number/blob/main/CHANGELOG.md',
+                    link: 'https://github.com/short-number/short-number/blob/master/CHANGELOG.md',
                 },
             ],
 
