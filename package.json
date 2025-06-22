@@ -11,7 +11,7 @@
         "preview": "yarn build && vitepress preview docs"
     },
     "devDependencies": {
-        "vitepress": "^1.5.0",
+        "vitepress": "^1.6.3",
         "vitepress-versioning-plugin": "^1.2.1"
     },
     "contributors": [
