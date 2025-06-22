@@ -6,7 +6,7 @@
     "author": "SerhiiCho <serhiicho@protonmail.com>",
     "license": "MIT",
     "scripts": {
-        "dev": "vitepress dev docs",
+        "dev": "vitepress dev docs --host",
         "build": "vitepress build docs",
         "preview": "yarn build && vitepress preview docs"
     },

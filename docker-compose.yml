@@ -1,0 +1,13 @@
+name: short-number-docs
+
+services:
+    app:
+        image: short-number-docs
+        container_name: short-number-docs
+        build:
+            context: .
+        volumes:
+            - .:/app
+            - /app/node_modules
+        ports:
+            - 3000:5173
