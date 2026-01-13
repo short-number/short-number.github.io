@@ -4,9 +4,7 @@ services:
     app:
         image: short-number-docs
         container_name: short-number-docs
-        build:
-            context: .
-            dockerfile: Containerfile
+        build: .
         volumes:
             - .:/app:z
         ports:
