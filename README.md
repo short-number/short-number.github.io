@@ -1,7 +1,7 @@
 # Short number documentation
 
-- Documentation for [short-number](https://github.com/short-number/short-number) package
-- Online [here](https://short-number.github.io/)
+- Documentation for [short-number](https://codeberg.org/short-number/short-number) package
+- Online [here](https://short-number.codeberg.page/)
 
 ## Development
 

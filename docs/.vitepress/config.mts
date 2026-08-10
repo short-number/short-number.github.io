@@ -14,7 +14,7 @@ export default defineVersionedConfig(
         lastUpdated: true,
 
         sitemap: {
-            hostname: 'https://short-number.github.io',
+            hostname: 'https://short-number.codeberg.page',
 
             // exclude old version pages from sitemap
             transformItems: items => {
@@ -26,8 +26,7 @@ export default defineVersionedConfig(
             versionSwitcher: false,
 
             footer: {
-                message:
-                    'Released under the <a href="https://github.com/short-number/short-number/blob/master/LICENSE" target="_blank">MIT License</a>',
+                message: 'https://codeberg.org/short-number/short-number/src/branch/master/LICENSE.md',
                 copyright: `Copyright © 2019 - ${new Date().getFullYear()} <a href="https://serhiicho.com/about-me" target="_blank">Serhii Cho</a>`,
             },
 
@@ -88,7 +87,7 @@ export default defineVersionedConfig(
                 },
                 {
                     text: 'Release Notes',
-                    link: 'https://github.com/short-number/short-number/blob/master/CHANGELOG.md',
+                    link: 'https://codeberg.org/short-number/short-number/src/branch/master/CHANGELOG.md',
                 },
             ],
 
@@ -98,9 +97,9 @@ export default defineVersionedConfig(
 
             socialLinks: [
                 {
-                    icon: 'github',
-                    ariaLabel: 'GitHub',
-                    link: 'https://github.com/short-number/short-number',
+                    icon: 'codeberg',
+                    ariaLabel: 'Codeberg',
+                    link: 'https://codeberg.org/short-number/short-number',
                 },
             ],
         },
