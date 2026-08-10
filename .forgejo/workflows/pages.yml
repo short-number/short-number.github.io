@@ -1,27 +1,28 @@
 name: Build and Deploy
 
 on:
-    push:
-        branches:
-            - master
-
-permissions:
-    contents: write
+  push:
+    branches: [master]
 
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout 🛎️
-              uses: actions/checkout@v4
+  build-and-deploy:
+    runs-on: burn
+    steps:
+      - name: Install deps 🛎️
+        run: |
+          apt-get update
+          apt-get install -y rsync
 
-            - name: Install and Build 🔧
-              run: |
-                  npm install
-                  npm run build
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
 
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@v4
-              with:
-                  # The folder the action should deploy.
-                  folder: docs/.vitepress/dist
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: https://github.com/JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/.vitepress/dist
+          branch: pages
