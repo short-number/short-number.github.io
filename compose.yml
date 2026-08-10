@@ -1,11 +1,11 @@
 name: short-number-docs
 
 services:
-    app:
-        image: short-number-docs
-        container_name: short-number-docs
-        build: .
-        volumes:
-            - .:/var/www/html:z
-        ports:
-            - 3000:5173
+  app:
+    image: short-number-docs
+    container_name: short-number-docs
+    build: .
+    volumes:
+      - .:/var/www/html:z
+    ports:
+      - 3000:5173
