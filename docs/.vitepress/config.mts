@@ -26,7 +26,7 @@ export default defineVersionedConfig(
             versionSwitcher: false,
 
             footer: {
-                message: 'https://codeberg.org/short-number/short-number/src/branch/master/LICENSE.md',
+                message: 'Released under the <a href="https://codeberg.org/short-number/short-number/src/branch/master/LICENSE.md" target="_blank">MIT License</a>',
                 copyright: `Copyright © 2019 - ${new Date().getFullYear()} <a href="https://serhiicho.com/about-me" target="_blank">Serhii Cho</a>`,
             },
 
