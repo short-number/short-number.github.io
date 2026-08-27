@@ -6,7 +6,10 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: burn
+    runs-on: podman
+    container: docker.io/library/node:26
+    name: Build and deploy
+
     steps:
       - name: Install deps 🛎️
         run: |
