@@ -1,6 +1,6 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
 import { defineVersionedConfig } from '@viteplus/versions'
-import { versions, latestVersion, outdatedVersions } from './theme/versions'
+import { versions, latestVersion, outdatedVersions } from './theme/versions.ts'
 import { resolve } from 'node:path'
 
 const hostname = 'https://short-number.serhiicho.com'
@@ -60,12 +60,7 @@ export default defineVersionedConfig(
             },
 
             sidebar: {
-                '/3.x/': [
-                    { text: 'Get Started', link: '/get-started' },
-                    { text: 'Configurations', link: '/configurations' },
-                    { text: 'Contribute', link: '/contribute' },
-                ],
-                '/': [
+                root: [
                     {
                         text: 'Guide',
                         items: [
@@ -98,6 +93,11 @@ export default defineVersionedConfig(
                         ],
                     },
                 ],
+                '3.x': [
+                    { text: 'Get Started', link: '/get-started' },
+                    { text: 'Configurations', link: '/configurations' },
+                    { text: 'Contribute', link: '/contribute' },
+                ],
             },
 
             logo: '/images/nav-logo.png',
@@ -125,6 +125,11 @@ export default defineVersionedConfig(
 
             socialLinks: [
                 {
+                    icon: 'packagist',
+                    ariaLabel: 'Packagist',
+                    link: 'https://packagist.org/packages/serhii/short-number',
+                },
+                {
                     icon: 'codeberg',
                     ariaLabel: 'Codeberg',
                     link: 'https://codeberg.org/short-number/short-number',
@@ -132,6 +137,4 @@ export default defineVersionedConfig(
             ],
         },
     },
-    // @ts-ignore
-    __dirname,
 )

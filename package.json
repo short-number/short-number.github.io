@@ -1,6 +1,7 @@
 {
     "name": "short-number",
     "main": "docs/.vitepress/index.js",
+    "type": "module",
     "repository": "https://codeberg.org/short-number/pages",
     "author": "SerhiiCho <serhiicho@protonmail.com>",
     "license": "MIT",
@@ -11,8 +12,8 @@
     },
     "devDependencies": {
         "@types/node": "^26.6.3",
-        "@viteplus/versions": "^2.0.8",
-        "vitepress": "^1.6.3"
+        "@viteplus/versions": "^2.1.0",
+        "vitepress": "^2.0.0-alpha.20"
     },
     "contributors": [
         {
