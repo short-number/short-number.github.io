@@ -6,9 +6,6 @@ description: Learn how to contribute to Short Number library by adding a new loc
 ---
 
 # Contribute
-:::danger Outdated version
-You are currently viewing an outdated version of the Short Number library. [Switch to the latest version](/) to access the newest features, improvements, and updates.
-:::
 
 Here is the [commit](https://codeberg.org/short-number/short-number/commit/fdafe3e61c4b1e5bfe16594b76d5a95b4c4aee4c) that added support for Ukrainian language. Contribute another language is very simple. You need to make 3 steps:
 

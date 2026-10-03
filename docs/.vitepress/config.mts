@@ -14,7 +14,7 @@ function setCanonicalTag(page: string): string {
 export default defineVersionedConfig(
     {
         lang: 'en-US',
-        title: 'Short number',
+        title: 'Short Number',
         description:
             'Lightweight, multilingual library for formatting large numbers into compact, human-readable abbreviations using language-specific units, making it easy to display big numbers in a concise and user-friendly format',
 
@@ -25,6 +25,11 @@ export default defineVersionedConfig(
                 { rel: 'canonical', href: setCanonicalTag(ctx.page) },
             ])
             return head
+        },
+
+        versionsConfig: {
+            current: latestVersion,
+            versionSwitcher: false,
         },
 
         lastUpdated: true,
@@ -56,26 +61,26 @@ export default defineVersionedConfig(
 
             sidebar: {
                 '/3.x/': [
-                    { text: 'Get Started', link: '/3.x/' },
-                    { text: 'Configurations', link: '/3.x/configurations' },
-                    { text: 'Contribute', link: '/3.x/contribute' },
+                    { text: 'Get Started', link: '/get-started' },
+                    { text: 'Configurations', link: '/configurations' },
+                    { text: 'Contribute', link: '/contribute' },
                 ],
-                '/4.x/': [
+                '/': [
                     {
                         text: 'Guide',
                         items: [
-                            { text: 'Get Started', link: '/4.x/' },
-                            { text: 'Usage Guide', link: '/4.x/usage-guide' },
+                            { text: 'Get Started', link: '/get-started' },
+                            { text: 'Usage Guide', link: '/usage-guide' },
                             {
                                 text: 'Configurations',
                                 items: [
                                     {
                                         text: 'Output',
-                                        link: '/4.x/configurations/output',
+                                        link: '/configurations/output',
                                     },
                                     {
                                         text: 'Language',
-                                        link: '/4.x/configurations/language',
+                                        link: '/configurations/language',
                                     },
                                 ],
                             },
@@ -84,12 +89,12 @@ export default defineVersionedConfig(
                     {
                         text: 'Information',
                         items: [
-                            { text: 'Upgrade Guide', link: '/4.x/upgrade' },
+                            { text: 'Upgrade Guide', link: '/upgrade' },
                             {
                                 text: 'What is Short Number?',
-                                link: '/4.x/what-is-short-number',
+                                link: '/what-is-short-number',
                             },
-                            { text: 'Contribute', link: '/4.x/contribute' },
+                            { text: 'Contribute', link: '/contribute' },
                         ],
                     },
                 ],
@@ -104,8 +109,8 @@ export default defineVersionedConfig(
                         props: { versions, latestVersion },
                     },
                     {
-                        text: 'Documentation',
-                        link: '/4.x/',
+                        text: 'Docs',
+                        link: '/get-started',
                     },
                     {
                         text: 'Release Notes',

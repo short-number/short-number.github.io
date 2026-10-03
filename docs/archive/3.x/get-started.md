@@ -6,9 +6,6 @@ description: Learn how to install Short Number library and get started with it
 ---
 
 # Documentation
-:::danger Outdated version
-You are currently viewing an outdated version of the Short Number library. [Switch to the latest version](/) to access the newest features, improvements, and updates.
-:::
 
 Lightweight package shortens given number to a short representation of it. For example **1234** will be formatted to **1k** and **20244023** to **20m**. Package supports multiple languages, the default it's set to English.
 

@@ -12,9 +12,6 @@ hero:
     - theme: brand
       text: Get Started →
       link: /3.x/get-started
-    - theme: alt
-      text: What is Short Number?
-      link: /3.x/what-is-short-number
 
 features:
   - title: No Dependencies

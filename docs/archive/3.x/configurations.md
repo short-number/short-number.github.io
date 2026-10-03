@@ -6,9 +6,6 @@ description: Learn how to configure Short Number library in your application
 ---
 
 # Configurations
-:::danger Outdated version
-You are currently viewing an outdated version of the Short Number library. [Switch to the latest version](/) to access the newest features, improvements, and updates.
-:::
 
 ## Change Language
 For changing the language you want to call `set()` method once before calling other methods from this package.
