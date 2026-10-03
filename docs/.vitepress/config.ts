@@ -106,7 +106,6 @@ export default defineVersionedConfig(
                 root: [
                     {
                         component: 'VersionSwitcher',
-                        props: { versions, latestVersion },
                     },
                     {
                         text: 'Docs',
