@@ -32,7 +32,7 @@ const currentVersion = computed(() => {
         :button="latestVersion === currentVersion ? `${currentVersion} (latest)` : currentVersion"
         :label="'Switch Version'"
     >
-        <div class="items">
+        <ul class="items">
             <template v-for="version in versions" :key="version">
                 <VPMenuLink
                     v-if="currentVersion !== version"
@@ -42,7 +42,7 @@ const currentVersion = computed(() => {
                     }"
                 />
             </template>
-        </div>
+        </ul>
     </VPFlyout>
 </template>
 
