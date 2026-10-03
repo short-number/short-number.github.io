@@ -1,4 +1,15 @@
-import defineVersionedConfig from 'vitepress-versioning-plugin'
+import type { HeadConfig, TransformContext } from 'vitepress'
+import { defineVersionedConfig } from '@viteplus/versions'
+import { versions, latestVersion, outdatedVersions } from './theme/versions'
+import { resolve } from 'node:path'
+
+const hostname = 'https://short-number.serhiicho.com'
+const excludeSitemapPrefixes = outdatedVersions.map(v => `${v}/`)
+
+function setCanonicalTag(page: string): string {
+    page = page.replace('.md', '.html')
+    return page == 'index.html' ? hostname : `${hostname}/${page}`
+}
 
 export default defineVersionedConfig(
     {
@@ -7,26 +18,39 @@ export default defineVersionedConfig(
         description:
             'Lightweight, multilingual library for formatting large numbers into compact, human-readable abbreviations using language-specific units, making it easy to display big numbers in a concise and user-friendly format',
 
-        versioning: {
-            latestVersion: '4.x',
+        transformHead: (ctx: TransformContext) => {
+            const head: HeadConfig[] = []
+            head.push([
+                'link',
+                { rel: 'canonical', href: setCanonicalTag(ctx.page) },
+            ])
+            return head
         },
 
         lastUpdated: true,
 
-        sitemap: {
-            hostname: 'https://short-number.codeberg.page',
-
-            // exclude old version pages from sitemap
-            transformItems: items => {
-                return items.filter(item => !item.url.startsWith('3.x/'))
+        vite: {
+            resolve: {
+                alias: {
+                    '@': resolve(import.meta.dirname, './theme'),
+                },
             },
         },
 
-        themeConfig: {
-            versionSwitcher: false,
+        sitemap: {
+            hostname,
+            // exclude old version pages from sitemap
+            transformItems: items =>
+                items.filter(
+                    item =>
+                        !excludeSitemapPrefixes.some(p => item.url.startsWith(p)),
+                ),
+        },
 
+        themeConfig: {
             footer: {
-                message: 'Released under the <a href="https://codeberg.org/short-number/short-number/src/branch/master/LICENSE.md" target="_blank">MIT License</a>',
+                message:
+                    'Released under the <a href="https://codeberg.org/short-number/short-number/src/branch/master/LICENSE.md" target="_blank">MIT License</a>',
                 copyright: `Copyright © 2019 - ${new Date().getFullYear()} <a href="https://serhiicho.com/about-me" target="_blank">Serhii Cho</a>`,
             },
 
@@ -73,23 +97,22 @@ export default defineVersionedConfig(
 
             logo: '/images/nav-logo.png',
 
-            nav: [
-                {
-                    component: 'VersionSwitcher',
-                    props: {
-                        versions: ['4.x', '3.x'],
-                        latestVersion: '4.x',
+            nav: {
+                root: [
+                    {
+                        component: 'VersionSwitcher',
+                        props: { versions, latestVersion },
                     },
-                },
-                {
-                    text: 'Documentation',
-                    link: '/4.x/',
-                },
-                {
-                    text: 'Release Notes',
-                    link: 'https://codeberg.org/short-number/short-number/src/branch/master/CHANGELOG.md',
-                },
-            ],
+                    {
+                        text: 'Documentation',
+                        link: '/4.x/',
+                    },
+                    {
+                        text: 'Release Notes',
+                        link: 'https://codeberg.org/short-number/short-number/src/branch/master/CHANGELOG.md',
+                    },
+                ],
+            },
 
             search: {
                 provider: 'local',

@@ -27,12 +27,9 @@ const currentVersion = computed(() => {
 
 <template>
     <VPFlyout
+        icon="vpi-versioning"
         class="VPVersionSwitcher"
-        :button="
-            latestVersion === currentVersion
-                ? `${currentVersion} (latest)`
-                : currentVersion
-        "
+        :button="latestVersion === currentVersion ? `${currentVersion} (latest)` : currentVersion"
         :label="'Switch Version'"
     >
         <div class="items">
@@ -40,11 +37,8 @@ const currentVersion = computed(() => {
                 <VPMenuLink
                     v-if="currentVersion !== version"
                     :item="{
-                        text:
-                            latestVersion === version
-                                ? `${version} (latest)`
-                                : version,
-                        link: `/${version}/`,
+                        text: latestVersion === version ? `${version} (latest)` : version,
+                        link: latestVersion === version ? '/' : `/${version}/`,
                     }"
                 />
             </template>
