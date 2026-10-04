@@ -25,3 +25,4 @@ The list of all supported PHP versions:
 - [8.2 (readonly classes, intersection types)](https://www.php.net/releases/8.2/en.php)
 - [8.3 (typed class const, override)](https://www.php.net/releases/8.3/en.php)
 - [8.4 (property hooks, asymmetric visibility)](https://www.php.net/releases/8.4/en.php)
+- [8.5 (URI extention, pipe operator, clone with)](https://www.php.net/releases/8.5/en.php)
