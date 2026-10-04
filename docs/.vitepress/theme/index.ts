@@ -1,7 +1,7 @@
 import type { Theme } from 'vitepress'
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
-import VersionSwitcher from '@/components/VersionSwitcher.vue'
+import VersionSwitcher from '@viteplus/versions/components/version-switcher.component.vue';
 import OutdatedVersion from '@/components/OutdatedVersion.vue'
 import '@/main.css'
 

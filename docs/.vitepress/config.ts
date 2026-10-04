@@ -1,6 +1,6 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
 import { defineVersionedConfig } from '@viteplus/versions'
-import { versions, latestVersion, outdatedVersions } from './theme/versions.ts'
+import { latestVersion, outdatedVersions } from './theme/versions.ts'
 import { resolve } from 'node:path'
 
 const hostname = 'https://short-number.serhiicho.com'
@@ -106,6 +106,7 @@ export default defineVersionedConfig(
                 root: [
                     {
                         component: 'VersionSwitcher',
+                        props: { latestLabel: 'latest' }
                     },
                     {
                         text: 'Docs',
