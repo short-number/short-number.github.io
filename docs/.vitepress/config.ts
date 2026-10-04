@@ -52,6 +52,8 @@ export default defineVersionedConfig(
                 ),
         },
 
+        cleanUrls: true,
+
         themeConfig: {
             footer: {
                 message:
