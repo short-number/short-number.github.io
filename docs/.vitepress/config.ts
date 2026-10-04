@@ -104,10 +104,7 @@ export default defineVersionedConfig(
 
             nav: {
                 root: [
-                    {
-                        component: 'VersionSwitcher',
-                        props: { latestLabel: 'latest' }
-                    },
+                    { component: 'VersionSwitcher' },
                     {
                         text: 'Docs',
                         link: '/get-started',
