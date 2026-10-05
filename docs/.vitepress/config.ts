@@ -33,6 +33,7 @@ export default defineVersionedConfig(
         },
 
         lastUpdated: true,
+        cleanUrls: true,
 
         vite: {
             resolve: {
@@ -51,8 +52,6 @@ export default defineVersionedConfig(
                         !excludeSitemapPrefixes.some(p => item.url.startsWith(p)),
                 ),
         },
-
-        cleanUrls: true,
 
         themeConfig: {
             footer: {
