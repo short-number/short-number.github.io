@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /3.x/
+Sitemap: https://short-number.serhiicho.com/sitemap.xml
