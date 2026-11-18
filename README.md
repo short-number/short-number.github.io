@@ -1,5 +1,7 @@
 # Short number documentation
 
+[![Build and Deploy](https://github.com/short-number/short-number.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/short-number/short-number.github.io/actions/workflows/gh-pages.yml)
+
 - Documentation for [short-number](https://github.com/short-number/short-number) package
 - Online [here](https://short-number.serhiicho.com/)
 

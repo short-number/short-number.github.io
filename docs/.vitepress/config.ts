@@ -56,7 +56,7 @@ export default defineVersionedConfig(
         themeConfig: {
             footer: {
                 message:
-                    'Released under the <a href="https://codeberg.org/short-number/short-number/src/branch/master/LICENSE.md" target="_blank">MIT License</a>',
+                    'Released under the <a href="https://github.com/short-number/short-number/blob/master/LICENSE.md" target="_blank">MIT License</a>',
                 copyright: `Copyright © 2019 - ${new Date().getFullYear()} <a href="https://serhiicho.com/about-me" target="_blank">Serhii Cho</a>`,
             },
 
@@ -112,7 +112,7 @@ export default defineVersionedConfig(
                     },
                     {
                         text: 'Release Notes',
-                        link: 'https://codeberg.org/short-number/short-number/src/branch/master/CHANGELOG.md',
+                        link: 'https://github.com/short-number/short-number/blob/master/CHANGELOG.md',
                     },
                 ],
             },
@@ -128,9 +128,9 @@ export default defineVersionedConfig(
                     link: 'https://packagist.org/packages/serhii/short-number',
                 },
                 {
-                    icon: 'codeberg',
-                    ariaLabel: 'Codeberg',
-                    link: 'https://codeberg.org/short-number/short-number',
+                    icon: 'github',
+                    ariaLabel: 'GitHub',
+                    link: 'https://github.com/short-number/short-number',
                 },
             ],
         },
