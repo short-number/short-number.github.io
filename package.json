@@ -2,7 +2,7 @@
     "name": "short-number",
     "main": "docs/.vitepress/index.js",
     "type": "module",
-    "repository": "https://codeberg.org/short-number/pages",
+    "repository": "https://github.com/short-number/short-number.github.io",
     "author": "SerhiiCho <serhiicho@protonmail.com>",
     "license": "MIT",
     "contributors": [

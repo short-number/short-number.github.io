@@ -19,8 +19,12 @@ jobs:
                   npm install
                   npm run build
 
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@v4
+            - name: Deploy Vite App 🚀
+              uses: SerhiiChoAction/deploy-vite@v1
               with:
-                  # The folder the action should deploy.
-                  folder: docs/.vitepress/dist
+                host-user: ${{ secrets.HOST_USER }}
+                host-ip: ${{ secrets.HOST_IP }}
+                host-key: ${{ secrets.HOST_PRIVATE_SSH_KEY }}
+                from: docs/.vitepress/dist/
+                to: ~/pages/short-number
+                to-pages-branch: true

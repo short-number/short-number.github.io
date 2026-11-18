@@ -1,6 +1,6 @@
 # Short number documentation
 
-- Documentation for [short-number](https://codeberg.org/short-number/short-number) package
+- Documentation for [short-number](https://github.com/short-number/short-number) package
 - Online [here](https://short-number.serhiicho.com/)
 
 ## Development
