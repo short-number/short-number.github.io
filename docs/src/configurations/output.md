@@ -32,5 +32,7 @@ Here is the full list of all available configurations for the latest version:
 | --- | --- | --- | --- |
 | `decimals` | `int` | `0` | Number of decimals to show on the formatted number |
 | `decimalsSeparator` | `string` | `.` | Separator for the decimals |
-| `suffixSeparator` | `string` | | Separator between the suffix and the number. Empty string by default |
+| `suffixSeparator` | `string` | `''` | Separator between the suffix and the number. Empty string by default |
 | `upperCase` | `bool` | `false` | Whether to show the suffix in uppercase or not |
+
+The `decimals` option truncates the digits instead of rounding them. The `upperCase` option requires the `mbstring` extension.

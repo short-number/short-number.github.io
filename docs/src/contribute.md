@@ -62,7 +62,7 @@ return new AbbreviationSet(
 );
 ```
 
-In Chinese, instead of showing `1千` (1 thousand), we want to just display `千`. Same applies to other suffixes when the number is`1`. This is where `overwrites` come in handy. The key of the rewrite is the original output, and the value is the new output. Keep in mind that overwrites will be applied to the full output, not just a part of it. The full string has to match the key to be replaced.
+In Chinese, instead of showing `1千` (1 thousand), we want to just display `千`. Same applies to other suffixes when the number is `1`. This is where `overwrites` come in handy. The key of the rewrite is the original output, and the value is the new output. Keep in mind that overwrites will be applied to the full output, not just a part of it. The full string has to match the key to be replaced.
 
 ## Step 2. Tests
 In the [`/tests/Sets/`](https://github.com/short-number/short-number/tree/master/tests/Sets) directory, create a test file for your language. The file should be named based on the language name. For example, for the Chinese language, the file is named `ChineseSetTest.php`.
@@ -99,10 +99,10 @@ self::withNegativeNumbers([], '%s-');
 But, you should obviously do it if your language requires it to be on the end of the number.
 
 ## Step 3. README File
-Add new language to `README.md` file under the section **Supported Languages** to let everybody know that this library supports your language.
+Add new language to `README.md` file under the section **Languages** to let everybody know that this library supports your language.
 
 ```md
-## Supported Languages
+## Languages
 | Flag | Language           | Code |
 | ---- | ------------------ | ---- |
 | 🇷🇺   | Russian            | ru   |

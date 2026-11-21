@@ -29,12 +29,12 @@ echo $lang; // output: "ru"
 ```
 
 ## Overwrite Translations
-To customize existing translations for a supported language or to add a new language, you can provide custom translations as the second argument to the `Lang::set()` method.
+To customize existing translations for a supported language, you can provide custom translations as the second argument to the `Lang::set()` method.
 
-There are two approaches to overriding translations suffixes:
+There are two approaches to overriding translation suffixes:
 
-1. **Override the current language**: Applies changes to the active language in use.
-2. **Override a specific language**: Targets a specific language, regardless of the currently active one.
+1. **Override the current language**: Applies changes to the active language in use. Omitting the second argument keeps any overwrites that were set earlier.
+2. **Override a specific language**: Sets the overwrites for one or more languages at once. Keep in mind that `setOverwrites()` replaces all existing overwrites, not just the ones for the given languages.
 
 ::: code-group
 ```php [1. Overwrite Current]
@@ -64,7 +64,7 @@ Lang::setOverwrites([ // [!code focus:9]
 ```
 :::
 
-Passing an empty array clears the overwrites for that language, restoring its default suffixes. Omitting the second argument keeps any overwrites that were set earlier.
+Passing an empty array clears the overwrites for that language, restoring its default suffixes.
 
 ```php
 use Serhii\ShortNumber\Lang;
@@ -83,10 +83,11 @@ Here is another example of simple overwrite:
 
 ```php
 use Serhii\ShortNumber\Lang;
+use Serhii\ShortNumber\Number;
 
 Lang::set('zh', ['千' => ' 千']); // [!code focus:3]
 
-echo Lang::short(2000); // output: "2 千"
+echo Number::short(2000); // output: "2 千"
 ```
 
 ## Reset to Defaults

@@ -64,7 +64,7 @@ If you are using the [overwrites feature](/configurations/language.html#overwrit
 ```php [Old Way]
 use Serhii\ShortNumber\Lang;
 
-Lang::set('en', overwrites: [
+Lang::set('en', custom_translations: [
     'thousand' => 'kilo',
     'million' => 'mil',
     'billion' => 'bil',

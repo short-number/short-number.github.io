@@ -10,7 +10,7 @@ Short Number is a lightweight, multilingual PHP library for formatting numbers i
 ## Advantages of Short Number
 **Short Number** is focused on providing the best performance and the most accurate number formatting. Here are some of the advantages of using Short Number:
 
-🚀 **Performs supe- fast**\
+🚀 **Fast execution**\
 Is written in a way to make the number parsing as fast as possible
 
 🌍 **Multilingual support**\
@@ -22,8 +22,8 @@ Has no external dependencies and is very lightweight
 🪶 **Low memory usage**\
 Loads only needed data into memory when parsing the input
 
-🛠 **Easy to use**\
-Has a simple and easy-to-use API
+📃 **Well documented**\
+Has a simple and easy-to-use API with decent docs
 
 :::tip Largest Supported Number
 The largest number that can be formatted by the Short Number library is 999 quadrillions `999,999,999,999,999,999` or `9.999 × 10¹⁷`.

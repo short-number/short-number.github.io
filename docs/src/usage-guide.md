@@ -5,7 +5,7 @@ description: Learn how to use Short Number library in your application
 ---
 
 # Usage Guide
-To convert a number to a short number, you can use the `Serhii\ShortNumber\Number` class with its `conv` (convert) method.
+To convert a number to a short number, you can use the `Serhii\ShortNumber\Number` class with its `short` method.
 
 ```php
 use Serhii\ShortNumber\Number;
@@ -23,5 +23,7 @@ Lang::set('ru'); // [!code focus:3]
 
 echo Number::short(1_893_234); // output: "1млн"
 ```
+
+Numbers larger than 999 quadrillions (`999,999,999,999,999,999`) throw [LargeNumberException](https://github.com/short-number/short-number/blob/master/src/Exceptions/LargeNumberException.php).
 
 Learn how to configure the library on the [Configuration](/configurations/output.html) page
