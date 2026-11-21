@@ -33,8 +33,8 @@ The largest number that can be formatted by the Short Number library is 999 quad
 |     | Language  | Code | Thousand | Million | Billion | Trillion | Quadrillion |
 | --- | --------- | ---- | -------- | ------- | ------- | -------- | ----------- |
 | 🇬🇧   | English   | en   | 1k       | 1m      | 1b      | 1t       | 1q          |
-| 🇷🇺   | Russian   | ru   | 1тыс     | 1млн    | 1млд    | 1трн     | 1квадр      |
-| 🇺🇦   | Ukrainian | uk   | 1тис     | 1млн    | 1млд    | 1трн     | 1квадр      |
+| 🇷🇺   | Russian   | ru   | 1тыс     | 1млн    | 1млрд   | 1трлн    | 1квадр      |
+| 🇺🇦   | Ukrainian | uk   | 1тис     | 1млн    | 1млрд   | 1трлн    | 1квадр      |
 | 🇨🇳   | Chinese   | zh   | 千       | 100万   | 10亿    | 兆       | 京          |
 | 🇯🇵   | Japanese  | ja   | 千       | 100万   | 10億    | 兆       | 京          |
 

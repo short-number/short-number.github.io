@@ -64,6 +64,19 @@ Lang::setOverwrites([ // [!code focus:9]
 ```
 :::
 
+Passing an empty array clears the overwrites for that language, restoring its default suffixes. Omitting the second argument keeps any overwrites that were set earlier.
+
+```php
+use Serhii\ShortNumber\Lang;
+use Serhii\ShortNumber\Number;
+
+Lang::set('en', overwrites: ['k' => 'thousand']);
+echo Number::short(1000); // output: "1thousand"
+
+Lang::set('en', overwrites: []);
+echo Number::short(1000); // output: "1k"
+```
+
 All the language sets live in the [`/sets`](https://github.com/short-number/short-number/tree/master/sets) directory in the root of the project. There, you can find suffixes that you can override.
 
 Here is another example of simple overwrite:
