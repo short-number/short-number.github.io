@@ -18,6 +18,8 @@ export default defineVersionedConfig(
         description:
             'Lightweight, multilingual library for formatting large numbers into compact, human-readable abbreviations using language-specific units, making it easy to display big numbers in a concise and user-friendly format',
 
+        head: [['link', { rel: 'icon', href: '/images/logo.webp' }]],
+
         transformHead: (ctx: TransformContext) => {
             const head: HeadConfig[] = []
             head.push([
